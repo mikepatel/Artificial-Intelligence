@@ -16,15 +16,16 @@ import java.util.List;
  * 		https://www.callicoder.com/java-priority-queue/
  */
 public class Node implements Comparable<Node>{
+	String name;
 	List<String> path = new ArrayList<String>(); // series of names (e.g. "a,b,c,d,e...")
-	double costFromStart = 0;
-	double estimatedCost = 0;
+	double costFromStart;
+	double estimatedCost;
 	
 	/*********************************************************************************************/
 	@Override
 	// Needed because Priority Queue has user-defined objects (i.e. Node)
 	public int compareTo(Node n) {
-		double t1 = this.costFromStart + this.estimatedCost;
+		double t1 = costFromStart + estimatedCost;
 		double t2 = n.costFromStart + n.estimatedCost;		
 		
 		if(t1 > t2) {
