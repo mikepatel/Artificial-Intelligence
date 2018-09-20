@@ -8,6 +8,7 @@ import java.util.List;
  * Fall 2018
  * 
  * Node user-defined object
+ * 		- name (of a city that is represented by node)
  * 		- path to node (series of city names)
  * 		- cost from start city to current city
  * 		- cost from current city to destination city
